@@ -4,21 +4,14 @@
 //
 //  Created by Борис Кравченко on 25.10.2024.
 //
-
 import SwiftUI
+import UIKit
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+struct ContentView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        return GiftViewController()
     }
-}
 
-#Preview {
-    ContentView()
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+    }
 }

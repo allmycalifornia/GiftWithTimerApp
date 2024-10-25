@@ -3,20 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		8ED643E32CCBB30200FD4EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED643DB2CCBB30200FD4EC6 /* Preview Assets.xcassets */; };
+		8ED643E42CCBB30200FD4EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */; };
+		8ED643E52CCBB30200FD4EC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643DE2CCBB30200FD4EC6 /* ContentView.swift */; };
+		8ED643E62CCBB30200FD4EC6 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */; };
+		8ED643E72CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E4942392CCBA16A005BF3E0 /* GiftWithTimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftWithTimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ED643DB2CCBB30200FD4EC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8ED643DE2CCBB30200FD4EC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		8ED643E02CCBB30200FD4EC6 /* GiftWithTimerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GiftWithTimerApp.entitlements; sourceTree = "<group>"; };
+		8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftWithTimerAppApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8E49423B2CCBA16A005BF3E0 /* GiftWithTimerApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GiftWithTimerApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8E4942362CCBA16A005BF3E0 /* Frameworks */ = {
@@ -32,7 +38,7 @@
 		8E4942302CCBA16A005BF3E0 = {
 			isa = PBXGroup;
 			children = (
-				8E49423B2CCBA16A005BF3E0 /* GiftWithTimerApp */,
+				8ED643E22CCBB30200FD4EC6 /* GiftWithTimerApp */,
 				8E49423A2CCBA16A005BF3E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +49,27 @@
 				8E4942392CCBA16A005BF3E0 /* GiftWithTimerApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8ED643DC2CCBB30200FD4EC6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8ED643DB2CCBB30200FD4EC6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8ED643E22CCBB30200FD4EC6 /* GiftWithTimerApp */ = {
+			isa = PBXGroup;
+			children = (
+				8ED643DC2CCBB30200FD4EC6 /* Preview Content */,
+				8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */,
+				8ED643DE2CCBB30200FD4EC6 /* ContentView.swift */,
+				8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */,
+				8ED643E02CCBB30200FD4EC6 /* GiftWithTimerApp.entitlements */,
+				8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */,
+			);
+			path = GiftWithTimerApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +86,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				8E49423B2CCBA16A005BF3E0 /* GiftWithTimerApp */,
 			);
 			name = GiftWithTimerApp;
 			packageProductDependencies = (
@@ -82,10 +106,12 @@
 				TargetAttributes = {
 					8E4942382CCBA16A005BF3E0 = {
 						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
 			buildConfigurationList = 8E4942342CCBA16A005BF3E0 /* Build configuration list for PBXProject "GiftWithTimerApp" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -94,7 +120,6 @@
 			);
 			mainGroup = 8E4942302CCBA16A005BF3E0;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 8E49423A2CCBA16A005BF3E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -109,6 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED643E32CCBB30200FD4EC6 /* Preview Assets.xcassets in Resources */,
+				8ED643E42CCBB30200FD4EC6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED643E52CCBB30200FD4EC6 /* ContentView.swift in Sources */,
+				8ED643E62CCBB30200FD4EC6 /* GiftViewController.swift in Sources */,
+				8ED643E72CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GiftWithTimerApp/GiftWithTimerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -252,6 +283,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gift Timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -260,9 +294,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -270,10 +304,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.allmycalifornia.GiftWithTimerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -283,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GiftWithTimerApp/GiftWithTimerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -291,6 +328,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gift Timer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -299,9 +339,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
@@ -309,10 +349,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.allmycalifornia.GiftWithTimerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
