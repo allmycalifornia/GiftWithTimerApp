@@ -12,6 +12,8 @@
 		8ED643E52CCBB30200FD4EC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643DE2CCBB30200FD4EC6 /* ContentView.swift */; };
 		8ED643E62CCBB30200FD4EC6 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */; };
 		8ED643E72CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */; };
+		8ED643EA2CCBBD7B00FD4EC6 /* GiftViewController+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643E92CCBBD7A00FD4EC6 /* GiftViewController+Timer.swift */; };
+		8ED643EC2CCBBD9700FD4EC6 /* GiftViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED643EB2CCBBD9600FD4EC6 /* GiftViewController+Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		8ED643E02CCBB30200FD4EC6 /* GiftWithTimerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GiftWithTimerApp.entitlements; sourceTree = "<group>"; };
 		8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftWithTimerAppApp.swift; sourceTree = "<group>"; };
+		8ED643E92CCBBD7A00FD4EC6 /* GiftViewController+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GiftViewController+Timer.swift"; sourceTree = "<group>"; };
+		8ED643EB2CCBBD9600FD4EC6 /* GiftViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GiftViewController+Animation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +69,21 @@
 				8ED643DC2CCBB30200FD4EC6 /* Preview Content */,
 				8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */,
 				8ED643DE2CCBB30200FD4EC6 /* ContentView.swift */,
-				8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */,
-				8ED643E02CCBB30200FD4EC6 /* GiftWithTimerApp.entitlements */,
 				8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */,
+				8ED643E82CCBBD3800FD4EC6 /* GiftView */,
+				8ED643E02CCBB30200FD4EC6 /* GiftWithTimerApp.entitlements */,
 			);
 			path = GiftWithTimerApp;
+			sourceTree = "<group>";
+		};
+		8ED643E82CCBBD3800FD4EC6 /* GiftView */ = {
+			isa = PBXGroup;
+			children = (
+				8ED643EB2CCBBD9600FD4EC6 /* GiftViewController+Animation.swift */,
+				8ED643E92CCBBD7A00FD4EC6 /* GiftViewController+Timer.swift */,
+				8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */,
+			);
+			path = GiftView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED643EC2CCBBD9700FD4EC6 /* GiftViewController+Animation.swift in Sources */,
 				8ED643E52CCBB30200FD4EC6 /* ContentView.swift in Sources */,
 				8ED643E62CCBB30200FD4EC6 /* GiftViewController.swift in Sources */,
+				8ED643EA2CCBBD7B00FD4EC6 /* GiftViewController+Timer.swift in Sources */,
 				8ED643E72CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
