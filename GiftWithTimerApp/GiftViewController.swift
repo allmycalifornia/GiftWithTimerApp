@@ -44,6 +44,21 @@ class GiftViewController: UIViewController {
             giftImage.heightAnchor.constraint(equalToConstant: 106)
         ])
         
+        // Добавляем анимацию для "тряски" подарка
+            shakeAnimation(for: giftImage)
+        
+        // Метод для создания анимации "тряски"
+        func shakeAnimation(for view: UIView) {
+            let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+            animation.fromValue = -0.1 // небольшой наклон влево
+            animation.toValue = 0.1 // небольшой наклон вправо
+            animation.duration = 0.1 // время на один наклон
+            animation.autoreverses = true // возвращается в начальное положение
+            animation.repeatCount = .infinity // бесконечный повтор
+            
+            view.layer.add(animation, forKey: "shakeAnimation")
+        }
+        
         // Создаем UILabel для отображения времени и добавляем его под giftImage
         timerLabel = UILabel()
         timerLabel.textColor = .white
@@ -56,7 +71,7 @@ class GiftViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             timerLabel.centerXAnchor.constraint(equalTo: timerView.centerXAnchor),
-            timerLabel.topAnchor.constraint(equalTo: giftImage.bottomAnchor, constant: 10)
+            timerLabel.topAnchor.constraint(equalTo: giftImage.bottomAnchor, constant: 5)
         ])
         
         // Запускаем таймер с обратным отсчётом
