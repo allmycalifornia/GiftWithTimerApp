@@ -24,7 +24,7 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
     
         private let bannerSubtitleLabel: UILabel = {
             let label = UILabel()
-            label.text = "You will get all premium templates, additional stickers and no ads"
+            label.text = "You will get all premium templates,\nadditional stickers and no ads"
             label.font = UIFont.systemFont(ofSize: 14)
             label.textColor = .white
             label.numberOfLines = 0
@@ -34,7 +34,7 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     // Массивы данных для хэштегов и изображений
     private let hashtags = ["#Осень", "#Портрет", "#Insta-стиль", "#Люди", "#Природа"]
-    private let images = ["feedImage1", "feedImage2", "feedImage3", "feedImage4", "feedImage5", "feedImage6", "feedImage1", "feedImage2"]
+    private let images = ["feedImage1", "feedImage2", "feedImage3", "feedImage4", "feedImage5", "feedImage6", "feedImage1", "feedImage2", "feedImage3", "feedImage4", "feedImage5", "feedImage6"]
     private let bannerImages = ["topBannerImage1", "topBannerImage2", "topBannerImage3", "topBannerImage4"] // добавленные изображения для bannerView
     
     init() {
@@ -55,7 +55,6 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        //setupBannerView()
         setupHashtagCollectionView()
         setupImagesCollectionView()
     }
@@ -176,19 +175,30 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
             return cell
         }
     }
-    
+
     // MARK: - UICollectionView DelegateFlowLayout
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == hashtagCollectionView {
-            return CGSize(width: hashtags[indexPath.item].size(withAttributes: [.font: UIFont.systemFont(ofSize: 16)]).width + 20, height: 32)
-        } else {
-            let width = (view.frame.width - 48) / 2 // Половина экрана минус отступы
-            return CGSize(width: width, height: width * 1.2) // Пропорциональная высота
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            if collectionView == hashtagCollectionView {
+                // Полная ширина текста с небольшим запасом
+                let label = UILabel()
+                label.text = hashtags[indexPath.item]
+                label.font = UIFont.systemFont(ofSize: 16)
+                label.sizeToFit()
+                return CGSize(width: label.frame.width + 20, height: 32)
+            } else {
+                // Пропорциональная высота для изображений
+                let imageName = images[indexPath.item]
+                if let image = UIImage(named: imageName) {
+                    let aspectRatio = image.size.height / image.size.width
+                    let width = (view.frame.width - 48) / 2 // Половина экрана минус отступы
+                    return CGSize(width: width, height: width * aspectRatio)
+                }
+                return CGSize(width: 0, height: 0) // На случай, если изображение не найдено
+            }
         }
     }
-}
-
+    
 // MARK: - Custom UICollectionViewCells
 
 class HashtagCell: UICollectionViewCell {
@@ -229,6 +239,7 @@ class ImageCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 14
         contentView.addSubview(imageView)
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
