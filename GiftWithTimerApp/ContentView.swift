@@ -9,7 +9,7 @@ import UIKit
 
 struct ContentView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        return GiftViewController()
+        return Task3ViewController()
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
