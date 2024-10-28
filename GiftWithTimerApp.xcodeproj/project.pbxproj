@@ -66,10 +66,10 @@
 		8EB15AC92CCE345A00CB9B5F /* Task3 */ = {
 			isa = PBXGroup;
 			children = (
+				8EB15ACA2CCE346700CB9B5F /* Task3ViewController.swift */,
 				8EAD07E22CCF7459007747F4 /* HashtagCell.swift */,
 				8EAD07E02CCF7442007747F4 /* ImageCell.swift */,
 				8EAD07DE2CCF7421007747F4 /* UIColor+Hex.swift */,
-				8EB15ACA2CCE346700CB9B5F /* Task3ViewController.swift */,
 			);
 			path = Task3;
 			sourceTree = "<group>";
