@@ -31,7 +31,7 @@ final class GiftViewController: UIViewController {
     // MARK: - UI Setup
     private func setupUI() {
         let timerView = UIView()
-        timerView.backgroundColor = .darkGray
+        timerView.backgroundColor = .darkGray.withAlphaComponent(0.6)
         timerView.layer.cornerRadius = circleDiameter / 2
         timerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(timerView)

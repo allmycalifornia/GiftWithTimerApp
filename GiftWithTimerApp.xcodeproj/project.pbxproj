@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EAD07DF2CCF7423007747F4 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD07DE2CCF7421007747F4 /* UIColor+Hex.swift */; };
+		8EAD07E12CCF7444007747F4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD07E02CCF7442007747F4 /* ImageCell.swift */; };
+		8EAD07E32CCF745A007747F4 /* HashtagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD07E22CCF7459007747F4 /* HashtagCell.swift */; };
 		8EB15ACB2CCE347100CB9B5F /* Task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB15ACA2CCE346700CB9B5F /* Task3ViewController.swift */; };
 		8ED643E32CCBB30200FD4EC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED643DB2CCBB30200FD4EC6 /* Preview Assets.xcassets */; };
 		8ED643E42CCBB30200FD4EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		8E4942392CCBA16A005BF3E0 /* GiftWithTimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftWithTimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAD07DE2CCF7421007747F4 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		8EAD07E02CCF7442007747F4 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		8EAD07E22CCF7459007747F4 /* HashtagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagCell.swift; sourceTree = "<group>"; };
 		8EB15ACA2CCE346700CB9B5F /* Task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task3ViewController.swift; sourceTree = "<group>"; };
 		8ED643DB2CCBB30200FD4EC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 		8EB15AC92CCE345A00CB9B5F /* Task3 */ = {
 			isa = PBXGroup;
 			children = (
+				8EAD07E22CCF7459007747F4 /* HashtagCell.swift */,
+				8EAD07E02CCF7442007747F4 /* ImageCell.swift */,
+				8EAD07DE2CCF7421007747F4 /* UIColor+Hex.swift */,
 				8EB15ACA2CCE346700CB9B5F /* Task3ViewController.swift */,
 			);
 			path = Task3;
@@ -76,25 +85,25 @@
 		8ED643E22CCBB30200FD4EC6 /* GiftWithTimerApp */ = {
 			isa = PBXGroup;
 			children = (
+				8ED643E82CCBBD3800FD4EC6 /* Task1 */,
 				8EB15AC92CCE345A00CB9B5F /* Task3 */,
 				8ED643DC2CCBB30200FD4EC6 /* Preview Content */,
 				8ED643DD2CCBB30200FD4EC6 /* Assets.xcassets */,
 				8ED643DE2CCBB30200FD4EC6 /* ContentView.swift */,
 				8ED643E12CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift */,
-				8ED643E82CCBBD3800FD4EC6 /* GiftView */,
 				8ED643E02CCBB30200FD4EC6 /* GiftWithTimerApp.entitlements */,
 			);
 			path = GiftWithTimerApp;
 			sourceTree = "<group>";
 		};
-		8ED643E82CCBBD3800FD4EC6 /* GiftView */ = {
+		8ED643E82CCBBD3800FD4EC6 /* Task1 */ = {
 			isa = PBXGroup;
 			children = (
 				8ED643EB2CCBBD9600FD4EC6 /* GiftViewController+Animation.swift */,
 				8ED643E92CCBBD7A00FD4EC6 /* GiftViewController+Timer.swift */,
 				8ED643DF2CCBB30200FD4EC6 /* GiftViewController.swift */,
 			);
-			path = GiftView;
+			path = Task1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAD07DF2CCF7423007747F4 /* UIColor+Hex.swift in Sources */,
 				8ED643EC2CCBBD9700FD4EC6 /* GiftViewController+Animation.swift in Sources */,
 				8EB15ACB2CCE347100CB9B5F /* Task3ViewController.swift in Sources */,
 				8ED643E52CCBB30200FD4EC6 /* ContentView.swift in Sources */,
 				8ED643E62CCBB30200FD4EC6 /* GiftViewController.swift in Sources */,
+				8EAD07E12CCF7444007747F4 /* ImageCell.swift in Sources */,
 				8ED643EA2CCBBD7B00FD4EC6 /* GiftViewController+Timer.swift in Sources */,
 				8ED643E72CCBB30200FD4EC6 /* GiftWithTimerAppApp.swift in Sources */,
+				8EAD07E32CCF745A007747F4 /* HashtagCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

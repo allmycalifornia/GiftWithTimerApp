@@ -9,12 +9,12 @@ import UIKit
 
 extension GiftViewController {
     // MARK: - Timer Setup
-    internal func startCountdown() {
+    func startCountdown() {
         updateTimerLabel()
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
-    @objc internal func updateTimer() {
+    @objc func updateTimer() {
         if remainingTime > 0 {
             remainingTime -= 1
             updateTimerLabel()
@@ -25,7 +25,7 @@ extension GiftViewController {
         }
     }
     
-    internal func updateTimerLabel() {
+    func updateTimerLabel() {
         let hours = Int(remainingTime) / 3600
         let minutes = (Int(remainingTime) % 3600) / 60
         let seconds = Int(remainingTime) % 60
