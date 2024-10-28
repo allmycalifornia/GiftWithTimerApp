@@ -14,28 +14,37 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
     private let imagesCollectionView: UICollectionView
     
     private let bannerLabel: UILabel = {
-            let label = UILabel()
-            label.text = "Try three days free trial"
-            label.font = UIFont.boldSystemFont(ofSize: 20)
-            label.textColor = .white
-            label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
+        let label = UILabel()
+        label.text = "Try three days free trial"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
-        private let bannerSubtitleLabel: UILabel = {
-            let label = UILabel()
-            label.text = "You will get all premium templates,\nadditional stickers and no ads"
-            label.font = UIFont.systemFont(ofSize: 14)
-            label.textColor = .white
-            label.numberOfLines = 0
-            label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
+    private let bannerSubtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "You will get all premium templates,\nadditional stickers and no ads"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let bannerImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(named: "bannerImage")
+        image.contentMode = .scaleAspectFit
+        image.clipsToBounds = true
+        image.isUserInteractionEnabled = true
+        return image
+    }()
     
     // Массивы данных для хэштегов и изображений
     private let hashtags = ["#Осень", "#Портрет", "#Insta-стиль", "#Люди", "#Природа"]
     private let images = ["feedImage1", "feedImage2", "feedImage3", "feedImage4", "feedImage5", "feedImage6", "feedImage1", "feedImage2", "feedImage3", "feedImage4", "feedImage5", "feedImage6"]
-    private let bannerImages = ["topBannerImage1", "topBannerImage2", "topBannerImage3", "topBannerImage4"] // добавленные изображения для bannerView
     
     init() {
         let hashtagLayout = UICollectionViewFlowLayout()
@@ -60,7 +69,7 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     private func setupView() {
-        view.backgroundColor = .black // включаем тёмную тему
+        view.backgroundColor = .black
         
         // Настройка bannerView
         bannerView.layer.cornerRadius = 12
@@ -75,35 +84,27 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
         view.addSubview(bannerView)
         view.addSubview(bannerLabel)
         view.addSubview(bannerSubtitleLabel)
+        view.addSubview(bannerImage)
         
-        // Настройка изображений в bannerView
-        for (index, imageName) in bannerImages.enumerated() {
-            let imageView = UIImageView(image: UIImage(named: imageName))
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
-            imageView.layer.cornerRadius = 6
-            bannerView.addSubview(imageView)
+        NSLayoutConstraint.activate([
+            bannerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            bannerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            bannerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            bannerView.heightAnchor.constraint(equalToConstant: 120),
             
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.widthAnchor.constraint(equalToConstant: 50),
-                imageView.heightAnchor.constraint(equalToConstant: 50),
-                imageView.trailingAnchor.constraint(equalTo: bannerView.trailingAnchor, constant: CGFloat(-10 - (60 * index))),
-                imageView.centerYAnchor.constraint(equalTo: bannerView.centerYAnchor),
-                
-                bannerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-                bannerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-                bannerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-                bannerView.heightAnchor.constraint(equalToConstant: 120),
-    
-                bannerLabel.topAnchor.constraint(equalTo: bannerView.topAnchor, constant: 16),
-                bannerLabel.leadingAnchor.constraint(equalTo: bannerView.leadingAnchor, constant: 16),
-    
-                bannerSubtitleLabel.topAnchor.constraint(equalTo: bannerLabel.bottomAnchor, constant: 4),
-                bannerSubtitleLabel.leadingAnchor.constraint(equalTo: bannerView.leadingAnchor, constant: 16),
-                bannerSubtitleLabel.trailingAnchor.constraint(equalTo: bannerView.trailingAnchor, constant: -16)
-            ])
-        }
+            bannerLabel.topAnchor.constraint(equalTo: bannerView.topAnchor, constant: 16),
+            bannerLabel.leadingAnchor.constraint(equalTo: bannerView.leadingAnchor, constant: 16),
+            
+            bannerSubtitleLabel.topAnchor.constraint(equalTo: bannerLabel.bottomAnchor, constant: 4),
+            bannerSubtitleLabel.leadingAnchor.constraint(equalTo: bannerView.leadingAnchor, constant: 16),
+            bannerSubtitleLabel.trailingAnchor.constraint(equalTo: bannerImage.trailingAnchor, constant: -16),
+            
+            bannerImage.topAnchor.constraint(equalTo: bannerView.topAnchor, constant: 16),
+            bannerImage.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: -16),
+            bannerImage.trailingAnchor.constraint(equalTo: bannerView.trailingAnchor, constant: -20),
+            bannerImage.heightAnchor.constraint(equalToConstant: 80),
+            bannerImage.widthAnchor.constraint(equalToConstant: 98)
+        ])
         
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -120,7 +121,7 @@ class Task3ViewController: UIViewController, UICollectionViewDataSource, UIColle
         view.addSubview(hashtagLabel)
         hashtagLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            hashtagLabel.topAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: 10),
+            hashtagLabel.topAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: 20),
             hashtagLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
         ])
     }
