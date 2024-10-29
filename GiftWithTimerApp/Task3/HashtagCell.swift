@@ -8,7 +8,7 @@
 import UIKit
 
 final class HashtagCell: UICollectionViewCell {
-    private let label = UILabel()
+    let label = UILabel()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
