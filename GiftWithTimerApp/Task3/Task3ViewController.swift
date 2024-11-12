@@ -63,6 +63,20 @@ class Task3ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fullScreenBackgroundView = UIView(frame: UIScreen.main.bounds)
+            fullScreenBackgroundView.backgroundColor = .black
+            view.insertSubview(fullScreenBackgroundView, at: 0) // На задний план
+
+            // Обновляем размер, чтобы покрыть область статуса (где часы)
+            fullScreenBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                fullScreenBackgroundView.topAnchor.constraint(equalTo: view.topAnchor, constant: -100),
+                fullScreenBackgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                fullScreenBackgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                fullScreenBackgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 100)
+            ])
+        
         setupView()
         setupHashtagCollectionView()
         setupImagesCollectionView()
