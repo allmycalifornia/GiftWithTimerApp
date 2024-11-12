@@ -47,7 +47,6 @@ extension Task3ViewController {
             bannerSubtitleLabel.trailingAnchor.constraint(equalTo: bannerImage.trailingAnchor, constant: -16),
 
             bannerImage.topAnchor.constraint(equalTo: bannerView.topAnchor, constant: 16),
-            bannerImage.bottomAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: -16),
             bannerImage.trailingAnchor.constraint(equalTo: bannerView.trailingAnchor, constant: -20),
             bannerImage.heightAnchor.constraint(equalToConstant: 80),
             bannerImage.widthAnchor.constraint(equalToConstant: 98)
